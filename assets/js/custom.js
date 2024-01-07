@@ -13,6 +13,7 @@ addSimMessageHandler("web", (data) => {
     switch(data.action) {
         case "open":
             const url = data.url;
+            console.log('in addSimMEssageHandler')
             window.postMessage("hello from post message");
             break;
     }                    
