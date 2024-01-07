@@ -13,7 +13,7 @@ addSimMessageHandler("web", (data) => {
     name = 'sim'
     console.log('in addSimMEssageHandler')
     console.log('window ', window)
-    const targetWindow = window.parent
+    const targetWindow = window.top
     console.log('targetWindow ', targetWindow)
     targetWindow.postMessage("hello from post message");              
 })
