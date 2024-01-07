@@ -11,6 +11,5 @@
  */
 addSimMessageHandler("web", (data) => {
     console.log('in addSimMEssageHandler')
-            window.postMessage("hello from post message");
-    }                    
+    window.postMessage("hello from post message");              
 })
