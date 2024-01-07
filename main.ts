@@ -713,7 +713,7 @@ console.log('hello from console')
 const msg = JSON.stringify('hello from sim')
 const buf = Buffer.fromUTF8(msg)
 control.simmessages.send('web', buf)
-
+web.open("https://makecode.com/")
 declare var window:any
 console.log(window)
 if (window !== undefined)
