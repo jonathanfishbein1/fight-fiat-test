@@ -11,10 +11,6 @@
  */
 addSimMessageHandler("web", (data) => {
     console.log('in addSimMEssageHandler')
-    switch(data.action) {
-        case "open":
-            const url = data.url;
             window.postMessage("hello from post message");
-            break;
     }                    
 })
