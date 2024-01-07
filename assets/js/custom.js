@@ -10,5 +10,5 @@
  * To register a constrol simmessages, use addSimMessageHandler
  */
 addSimMessageHandler("web", (data) => {
-    console.log('app', app)          
+    globalFunction()         
 })
