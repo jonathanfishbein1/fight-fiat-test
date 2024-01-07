@@ -718,3 +718,5 @@ declare var window:any
 console.log(window)
 if (window !== undefined)
     window.postMessage('from window')
+else
+    console.log('window undefined')
