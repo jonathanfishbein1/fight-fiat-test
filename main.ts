@@ -709,6 +709,10 @@ game.onUpdate(function () {
         rotateSplashScreen()
     }
 })
+game.splash("press A to browse to makecode.com")
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    web.open("https://makecode.com/")
+})
 // console.log('hello from console')
 // const msg = JSON.stringify('hello from sim')
 // const buf = Buffer.fromUTF8(msg)
