@@ -471,37 +471,6 @@ function startAttractMode () {
 }
 function initScreen () {
     createStarfield()
-    fortressPositions = [
-    1,
-    2,
-    4,
-    5,
-    7,
-    8
-    ]
-    for (let value of fortressPositions) {
-        for (let index = 0; index <= 1; index++) {
-            fortress = sprites.create(img`
-                c 6 6 6 6 6 c 6 6 6 6 6 c . . . 
-                6 c 6 6 6 6 6 c 6 6 6 6 6 c . . 
-                6 6 c 6 6 6 6 6 c 6 6 6 6 6 c . 
-                6 6 6 c c c c c c c c c c c c c 
-                6 6 6 c 7 7 7 7 7 c 7 7 7 7 7 c 
-                6 6 6 c 7 7 7 7 7 c 7 7 7 7 7 c 
-                c 6 6 c 7 7 7 7 7 c 7 7 7 7 7 c 
-                6 c 6 c 7 7 7 7 7 c 7 7 7 7 7 c 
-                6 6 c c 7 7 7 7 7 c 7 7 7 7 7 c 
-                6 6 6 c c c c c c c c c c c c c 
-                6 6 6 c 7 7 7 7 7 c 7 7 7 7 7 c 
-                6 6 6 c 7 7 7 7 7 c 7 7 7 7 7 c 
-                c 6 6 c 7 7 7 7 7 c 7 7 7 7 7 c 
-                . c 6 c 7 7 7 7 7 c 7 7 7 7 7 c 
-                . . c c 7 7 7 7 7 c 7 7 7 7 7 c 
-                . . . c c c c c c c c c c c c c 
-                `, SpriteKindLegacy.Fortress)
-            fortress.setPosition(value * 16 + 8, 82 + index * 16)
-        }
-    }
 }
 function testForNewLevel () {
     numEnemies = sprites.allOfKind(SpriteKindLegacy.Enemy).length
@@ -651,8 +620,6 @@ let initAlienShotChance = 0
 let nextAlienMove = 0
 let initSpaceshipChance = 0
 let numEnemies = 0
-let fortress: Sprite = null
-let fortressPositions: number[] = []
 let player2: Sprite = null
 let projectile: Sprite = null
 let heartbeatNotes: number[] = []
