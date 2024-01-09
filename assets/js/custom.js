@@ -10,6 +10,10 @@
  * To register a constrol simmessages, use addSimMessageHandler
  */
 console.log('in custom js')
+const iframes = document.getElementsByTagName('iframe')
+console.log('iframes ', iframes)
+const iframeDocuments = [...iframes].map(iframe => iframe.contentDocument || iframe.contentWindow.document)
+ console.log('iframeDocuments ', iframeDocuments)
 addSimMessageHandler("web", (data) => {
     console.log('addSimMessageHandler')
     const targetWindow = window.parent
