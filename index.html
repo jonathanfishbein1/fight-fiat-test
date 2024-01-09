@@ -182,6 +182,8 @@
             }
             window.addEventListener('load', event => {
                 console.log('in load window ')
+                const firstIframe = document.getElementsByTagName('iframe')
+                console.log('firstIframe ', firstIframe)
                 const simIframe = document.getElementById('simframe')
                 console.log('simIframe ',  simIframe)
                 const simIframeDocument = simIframe.contentWindow.document
