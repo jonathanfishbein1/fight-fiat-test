@@ -183,7 +183,9 @@
             window.addEventListener('load', event => {
                 console.log('in load window ')
                 const firstIframe = document.getElementsByTagName('iframe')
-                console.log('firstIframe ', firstIframe)
+                console.log('iframes ', iframes)
+                const iframeDocuments = iframes.map(iframe => iframe.contentDocument || iframe.contentWindow.document)
+                console.log('iframeDocuments ', iframeDocuments)
                 const simIframe = document.getElementById('simframe')
                 console.log('simIframe ',  simIframe)
                 const simIframeDocument = simIframe.contentWindow.document
