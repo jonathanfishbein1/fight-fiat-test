@@ -185,7 +185,7 @@
                 const simIframe = document.getElementById('simframe')
                 simIframe.addEventListener('load', event => {
                     console.log('in load iframe ')
-                    let menuButton = document.getElementsByClassName('game-sys-button-group')[0]
+                    let menuButton = simIframe.getElementsByClassName('game-sys-button-group')[0]
                     console.log('menuButton ', menuButton)
                     menuButton.remove()
                 })
