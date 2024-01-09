@@ -185,14 +185,14 @@
                 const iframes = document.getElementsByTagName('iframe')
                 console.log('iframes ', iframes)
                 const iframeDocuments = [...iframes].map(iframe => iframe.contentDocument || iframe.contentWindow.document)
-                console.log('iframeDocuments ', iframeDocuments)
-                const simIframe = document.getElementById('simframe')
-                console.log('simIframe ',  simIframe)
-                const simIframeDocument = simIframe.contentWindow.document
-                console.log('simIframeDocument ',  simIframeDocument)
-                simIframe.addEventListener('load', event => {
+                // console.log('iframeDocuments ', iframeDocuments)
+                // const simIframe = document.getElementById('simframe')
+                // console.log('simIframe ',  simIframe)
+                // const simIframeDocument = simIframe.contentWindow.document
+                // console.log('simIframeDocument ',  simIframeDocument)
+                iframeDocuments[0].addEventListener('load', event => {
                     console.log('in load iframe ')
-                    let menuButton = simIframe.getElementsByClassName('game-sys-button-group')[0]
+                    let menuButton = iframeDocuments[0].getElementsByClassName('game-sys-button-group')[0]
                     console.log('menuButton ', menuButton)
                     menuButton.remove()
                 })
