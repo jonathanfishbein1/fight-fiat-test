@@ -180,9 +180,11 @@
             if (embed && root) {
                 root.className += " embed";
             }
-            let menuButton = document.getElementsByClassName('game-sys-button-group')[0]
-            console.log('menuButton ', menuButton)
-            menuButton.remove()
+            document.ready(() => {
+                let menuButton = document.getElementsByClassName('game-sys-button-group')[0]
+                console.log('menuButton ', menuButton)
+                menuButton.remove()
+            }
         }
     </script>
 </body>
