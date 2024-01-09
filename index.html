@@ -184,6 +184,8 @@
                 console.log('in load window ')
                 const simIframe = document.getElementById('simframe')
                 console.log('simIframe ',  simIframe)
+                const simIframeDocument = simIframe.contentDocument
+                console.log('simIframeDocument ',  simIframeDocument)
                 simIframe.addEventListener('load', event => {
                     console.log('in load iframe ')
                     let menuButton = simIframe.getElementsByClassName('game-sys-button-group')[0]
