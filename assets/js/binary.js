@@ -1,4 +1,4 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.46/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"1.1.5","target":"arcade","targetVersion":"1.12.46","repo":"jonathanfishbein1/space-invaders"}
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.46/---simulator?hideSimButtons=1","cdnUrl":"https://pxt.azureedge.net","version":"1.1.5","target":"arcade","targetVersion":"1.12.46","repo":"jonathanfishbein1/space-invaders"}
 // total=1865809 new=9.27% cached=85.82% other=4.91%
 (function (ectx) {
 'use strict';
