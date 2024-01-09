@@ -9,6 +9,7 @@
  * 
  * To register a constrol simmessages, use addSimMessageHandler
  */
+console.log('in custom js')
 addSimMessageHandler("web", (data) => {
     console.log('addSimMessageHandler')
     const targetWindow = window.parent
