@@ -9,11 +9,26 @@
  * 
  * To register a constrol simmessages, use addSimMessageHandler
  */
-console.log('in custom js')
-const iframes = document.getElementsByTagName('iframe')
-console.log('iframes ', iframes)
-const iframeDocuments = [...iframes].map(iframe => iframe.contentDocument || iframe.contentWindow.document)
- console.log('iframeDocuments ', iframeDocuments)
+            window.addEventListener('load', event => {
+                console.log('in load window ')
+                const iframes = document.getElementsByTagName('iframe')
+                console.log('iframes ', iframes)
+                const iframeDocuments = [...iframes].map(iframe => iframe.contentDocument || iframe.contentWindow.document)
+                 console.log('iframeDocuments ', iframeDocuments)
+                console.log('iframeDocuments[0].body ', iframeDocuments[0].body)
+                // const simIframe = document.getElementById('simframe')
+                // console.log('simIframe ',  simIframe)
+                // const simIframeDocument = simIframe.contentWindow.document
+                // console.log('simIframeDocument ',  simIframeDocument)
+                // iframeDocuments[0].addEventListener('load', event => {
+                    console.log('in load iframe ')
+                    let menuButton = iframeDocuments[0].getElementsByClassName('game-sys-button-group')[0]
+                    console.log('menuButton ', menuButton)
+                    menuButton.remove()
+                // })
+
+            }
+            )
 addSimMessageHandler("web", (data) => {
     console.log('addSimMessageHandler')
     const targetWindow = window.parent
